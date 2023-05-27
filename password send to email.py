@@ -1,6 +1,6 @@
-import random
-import string
-import smtplib
+import random       # For Generate a random password
+import string       # For use String functions letters,digits characters
+import smtplib      # For Send Email
 
 print("\nWelcome to rendom password Generat and email send with Python\n")
     
@@ -11,13 +11,14 @@ R = "".join(x)
 print("Your password is Generated..\n")
 name = input("Enter your name : ")
 print()
-receiver = input("Emter your Email id : ")
+receiver = input("Emter your Email id : ")         # user Email store in receiver
 
-ob = smtplib.SMTP("smtp.gmail.com",587)
+ob = smtplib.SMTP("smtp.gmail.com",587)            # make object name ss to access function
 ob.starttls()
-ob.login("kalpraj51@gmail.com","##pasword##")
+ob.login("kalpraj51@gmail.com","##pasword##")      # For login my account
 print("login success ...")
 
+# make subject and body in email
 subject = "Password send using python "
 
 j ="Hello ",name,",","\n\nYour generated password is : ",R,"\n\n\nThank You\nto use rendom password generate and Email send using python"
